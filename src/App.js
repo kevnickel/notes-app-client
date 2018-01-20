@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { Nav, NavItem, Navbar } from "react-bootstrap";
 import { authUser, signOutUser } from "./libs/awsLib";
 import Routes from "./Routes";
@@ -25,6 +25,7 @@ class App extends Component {
     signOutUser();
   
     this.userHasAuthenticated(false);
+    this.props.history.push("/login");
   }
   
   async componentDidMount() {
@@ -77,4 +78,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);
