@@ -1,5 +1,8 @@
 export default {
   MAX_ATTACHMENT_SIZE: 5000000,
+  s3: {
+    BUCKET: "mpirica-kevin-notes"
+  },
   apiGateway: {
     URL: "https://grusq7qep8.execute-api.us-west-2.amazonaws.com/prod",
     REGION: "us-west-2"
